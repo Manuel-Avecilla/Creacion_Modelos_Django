@@ -48,7 +48,7 @@ class Etiqueta(models.Model):
     tareas_asignadas = models.ManyToManyField(Tarea, related_name="etiquetas_tareas")
 
 class Asignacion_Tarea(models.Model):
-    obsevaciones = models.TextField()
+    observaciones = models.TextField()
     fecha_asignacion = models.DateTimeField(default=timezone.now)
     
     tarea = models.ForeignKey(Tarea,on_delete=models.CASCADE)
